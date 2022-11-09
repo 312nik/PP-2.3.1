@@ -17,7 +17,7 @@ public class CarsController {
 /*   @GetMapping(value = "/cars")
     public String showCars(@RequestParam(defaultValue = "5") int count, Model model) {
 
-        if (count == 1) {
+        if (count < 2) {
             return "invalid request";
         } else {
             Service service = new Service();
