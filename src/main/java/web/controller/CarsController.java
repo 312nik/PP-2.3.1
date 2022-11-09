@@ -11,8 +11,8 @@ import web.service.Service;
 public class CarsController {
 
 /* не сосвсем  корректно  условие - из него  четко не  следует,
-что при  запросе 1 машины  мы  должны  вывести только  одну.Соответственно  реализовал
-с  ошибкой.
+что при передачи параметра 0 и 1 машины -мы  что  то  должны  выводить.
+Соответственног  вывел данные  параметры с  ошибкой
 /*
 /*   @GetMapping(value = "/cars")
     public String showCars(@RequestParam(defaultValue = "5") int count, Model model) {
@@ -30,7 +30,6 @@ public class CarsController {
 
     @GetMapping(value = "/cars")
     public String showCars(@RequestParam(defaultValue = "5") int count, Model model) {
-
 
         Service service = new Service();
         model.addAttribute("count", service.getCars(count));
